@@ -12,6 +12,7 @@ import { SpellCard } from "../src/components/SpellCard";
 import { api } from "../lib/api";
 
 export default function SearchSpell() {
+  const [searchTrue, setSearchTrue] = useState(false);
   const [spellData, setSpellData] = useState({
     name: "",
     description: "",
@@ -19,7 +20,7 @@ export default function SearchSpell() {
     range: "",
     area: "",
     duration: "",
-    resistance: "",
+    resistence: "",
     target: "",
     effect: "",
     enhancements: [],
@@ -29,6 +30,7 @@ export default function SearchSpell() {
   const getSpellData = async () => {
     const { data } = await api.get(`/spells/${text}`);
     setSpellData(data);
+    setSearchTrue(true);
     console.log(spellData);
   };
 
@@ -53,18 +55,20 @@ export default function SearchSpell() {
           <StatusBar style="light" />
         </View>
         <View>
-          <SpellCard
-            name={spellData.name}
-            enhancements={spellData.enhancements}
-            description={spellData.description}
-            execution={spellData.execution}
-            range={spellData.range}
-            target={spellData.target}
-            resistance={spellData.resistance}
-            area={spellData.area}
-            duration={spellData.duration}
-            effect={spellData.effect}
-          />
+          {searchTrue === true && (
+            <SpellCard
+              name={spellData.name}
+              enhancements={spellData.enhancements}
+              description={spellData.description}
+              execution={spellData.execution}
+              range={spellData.range}
+              target={spellData.target}
+              resistence={spellData.resistence}
+              area={spellData.area}
+              duration={spellData.duration}
+              effect={spellData.effect}
+            />
+          )}
         </View>
       </View>
     </ImageBackground>
