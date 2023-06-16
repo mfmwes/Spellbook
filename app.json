@@ -1,29 +1,37 @@
 {
   "expo": {
-    "name": "spellbook",
+    "name": "Spellbook",
     "scheme": "spellbook",
-    "slug": "spellbook",
+    "slug": "Spellbook",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/spellbook-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splashscreen.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wesmilitao.spellbook"
     },
     "android": {
+      "package": "com.wesmilitao.spellbook",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/spellbook-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "360df010-c527-40a5-ac03-4a35e798a99e"
+      }
     }
   }
 }

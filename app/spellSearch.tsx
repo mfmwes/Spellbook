@@ -52,7 +52,7 @@ export default function SearchSpell() {
               Pesquisar
             </Text>
           </TouchableOpacity>
-          <StatusBar style="light" />
+         
         </View>
         <View>
           {searchTrue === true && (
@@ -71,6 +71,7 @@ export default function SearchSpell() {
           )}
         </View>
       </View>
+      <StatusBar style="light" />
     </ImageBackground>
   );
 }

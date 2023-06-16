@@ -3,7 +3,6 @@ import { StatusBar } from "expo-status-bar";
 import { useFonts, Roboto_400Regular } from "@expo-google-fonts/roboto";
 import { MedievalSharp_400Regular } from "@expo-google-fonts/medievalsharp";
 import bg from "../src/assets/bg.png";
-import { Link } from "expo-router";
 import { useRouter } from "expo-router";
 
 export default function App() {
@@ -31,7 +30,7 @@ export default function App() {
         </View>
 
         <TouchableOpacity
-          onPress={() => router.push('/search') }
+          onPress={() => router.push("/menu")}
           activeOpacity={0.7}
           className="rounded-full bg-green-500 px-12 py-3"
         >
@@ -39,11 +38,11 @@ export default function App() {
         </TouchableOpacity>
       </View>
 
-      <StatusBar style="light" />
       <Text className="text-gray-50 mb-3 text-sm">
         {" "}
         Feito pra resolver nossa vida{" "}
       </Text>
+      <StatusBar style="light" />
     </ImageBackground>
   );
 }
